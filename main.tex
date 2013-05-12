@@ -1,0 +1,90 @@
+% -*- coding: utf-8 -*-
+
+%% Fonts and languages.
+\usepackage[utf8]{inputenc}
+\usepackage[T2A, T1]{fontenc}
+%\usepackage{fontspec}
+%\setmainfont{DejaVu Serif}
+
+\usepackage[russian, american, ngerman]{babel}
+\usepackage{textcomp}              %% Additional symbols.
+\usepackage{mathptmx}              %% --- Times mit Matheschriften
+\usepackage[scaled=.90]{helvet}    %% --- Helvetica (Arial)
+\usepackage{courier}               %% --- Courier
+\usepackage{amsmath}               %% Some math fonts.
+\usepackage{amsthm}                %% Some math fonts.
+
+%% Tables.
+\usepackage{tabularx}
+
+% Bibliography.
+\usepackage{biblatex}
+\bibliography{bibliography}
+
+%% Columns.
+\usepackage{multicol}
+
+%% Graphics, images, diagrams.
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+%% Trees and structures.
+\usepackage{qtree}
+
+%% Contents and hyperlinks hiding red colored boxes around links.
+\usepackage{hyperref}
+
+\begin{document}
+\selectlanguage{ngerman}
+\mode*
+
+\mode<all>{
+  \title[SRL]{POS Tagging}
+  \subtitle{Automatische Auszeichnung der Wortarten}
+  \author[A.\,Beliankou, C.\,Sporleder]{Andrei Beliankou und Caroline
+    Sporleder}
+  \institute[Trier]{Universität Trier}
+  \date[08.05.2013]{08. Mai 2013}
+}
+
+\maketitle
+
+\begin{abstract}
+  Hier paar Zeilen als Kurzfassung.
+\end{abstract}
+
+\tableofcontents
+
+\begin{frame}[noframenumbering, plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unterrepräsentierte Sprachen}
+  \only<1>{Was machen wir mit einer Sprache ohne Korpora?}
+
+  \only<2>{
+    \begin{itemize}
+    \item Regeln entwickeln
+    \item Lerngrundlage vorbereiten
+    \item Nicht überwachte Lernmethoden anwenden
+    \item Transfer-Methoden einsetzen
+    \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Überblick}
+  \begin{itemize}
+  \item Wortarten: Kriterien, Klassifikationen, Tagsets, praktische Sicht
+  \item POS-Tagging: Lernquellen, Taggerbeispiele
+  \item Statistische n-Gramm-Modelle
+  \item Nicht überwachte Methoden
+  \end{itemize}
+\end{frame}
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main.presentation"
+%%% End: 
