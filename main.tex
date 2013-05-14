@@ -18,7 +18,7 @@
 \usepackage{tabularx}
 
 % Bibliography.
-\usepackage{biblatex}
+\usepackage[citestyle=authoryear]{biblatex}
 \bibliography{bibliography}
 
 %% Columns.
@@ -85,19 +85,48 @@
 
 \begin{frame}
   \frametitle{Was ist die Kategorie "`Wortart"'?}
-  Definition der Wortart, Tagsets, Diskussion.
-  (Sehr wahrscheinlich auslassen)
+
+  \only<2>{
+    Wortarten sind größere Wortgruppen, die sich nach folgenden
+    Merkmalen herausgliedern lassen:
+    \begin{itemize}
+    \item das Vorhandensein einer kategorialen (abstrakten) Bedeutung, die eine
+      konkrete lexikalische Bedeutung begleitet;
+    \item ein System der grammatischen Merkmale, die für die gegebene
+      Kategorie typisch sind;
+    \item Besonderheiten des syntaktischen Verhaltens;
+    \item morphologische Merkmale.
+    \end{itemize}
+
+  }
+
+  \only<3>{
+
+    Definitionsversuche lassen sich in drei Gruppen unterscheiden \parencite[17]{engel_deutsche_1996}:
+    \begin{itemize}
+    \item \emph{flexematische} Verfahren;
+    \item \emph{distributionelle} Verfahren;
+    \item \emph{semantische} Verfahren.
+    \end{itemize}
+  }
 \end{frame}
 
 \begin{frame}
   \frametitle{Lexikon und Unigramme}
-  Lexikonbasierte Ansätze und Wortstatistiken.
+  Lexikonbasierte Ansätze und Wortstatistiken:
+  \begin{itemize}
+  \item Hauses $\rightarrow$ NN
+  \item essen/VB (0,8965), essen/NN (0,3426) $\rightarrow$ VB
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Eric Brills Tagger}
-  Idee von TBL und Regeln.
+  
+  Als ein klassisches Beispiel können wir die Arbeit von \textcite{brill_simple_1992} ansehen.
 
+  Wie kann man eine Regel definieren?
+  
 \end{frame}
 
 \begin{frame}
@@ -106,12 +135,6 @@
     \centering
     \includegraphics[width = \textwidth]{tree_tagger}
   \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Nicht überwachte Methoden}
-
-  %\textcite{biemann_unsupervised_2009}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
